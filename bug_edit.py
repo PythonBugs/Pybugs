@@ -1,6 +1,6 @@
 import radon.metrics
 import sys
-file_name= sys.argv[0]
+file_name= sys.argv[1]
 download_dir = "C:\\Users\\Sai\\Desktop\\pybugs\\result.html"
 num_lines=sum(1 for line in open(file_name))
 result= open(download_dir, 'w')
