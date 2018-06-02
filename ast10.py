@@ -4,7 +4,7 @@ import os
 from radon.raw import analyze
 import radon.metrics
 import sys
-file_name = sys.argv[0]
+file_name = sys.argv[1]
 
 download_dir = "C:\\Users\\Sai\\Desktop\\pybugs\\metrics.html"
 columnTitleRow = "LOC,LLOC,SLOC,comments,multi,blank,single_comments,Halstead Volume,CC,comment %,h1,h2,N1,N2,h,N,calculated_length,difficulty,effort,time,bugs\n"
