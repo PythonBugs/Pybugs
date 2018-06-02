@@ -1,0 +1,42 @@
+
+<html>
+<head>
+	
+</head>
+<body>
+
+<img src="playground.png" alt="Playground" width="451" height="203" style="margin-left: 50px" >
+
+<div class="row">
+  	<div class="column1">
+  			<input type="file" id = "myFile" size="40" style="margin-left: 150px; margin-top: 50px">
+  	</div>
+  	<div class="column2">
+		<a href="javascript:metric(x)">
+  		<img src="upload.png" width="300" height="300" style="margin-left: 150px; margin-top: 30px"></a>
+  		<script type="text/javascript" language="javascript">
+  			var x = document.getElementById("myFile");
+			
+			function metric(x) {
+			var oShell = new ActiveXObject("wscript.shell"); 
+			  oShell.Run("cmd.exe  /k python C:\\Users\\Sai\\Desktop\\pybugs\\bug_edit.py "+x.files.item(0).name);
+			  }
+			  function metric_display()
+			  {window.location.href("C:\\Users\\Sai\\Desktop\\pybugs\\result.html");
+			}
+		  
+  
+		</script>
+		<a href="javascript:metric_display(x)">
+		<img src="arrow.png" width="199" height="278" style="margin-left: 150px; margin-top: 20px">
+		</a>
+  	</div>
+
+  	<div class="column3">
+  		<img src="alt.png" width="47" height="47">
+     
+  	</div>
+</div>
+
+</body>
+</html>

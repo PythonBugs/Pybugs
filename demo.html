@@ -1,0 +1,63 @@
+
+<html>
+<head>
+	<title>PyBugs PlayGround</title>
+	<script type="text/javascript">
+		function train(){
+			window.open("train.html")
+		}
+		function test(){
+			window.open("test.html")
+		}
+		function code_metrics(file_metrics){
+			var oShell = new ActiveXObject("wscript.shell");
+			oShell.Run("cmd.exe /k python "+file_metrics);
+
+		}
+	</script>
+
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div>
+		<img src="playground.png" alt="Playground" width="451" height="203" style="margin-left: 80px" >
+		<img src="train.png" alt="train" width="300" height="175" onclick="train()" style="cursor: pointer; margin-left: 100px"  >
+		<img src="test.png" alt="test" width="300" height="175" onclick="test()" style="cursor: pointer">
+	</div>
+	<div>
+		<img src="tr.png" alt="tr" width="500" height="500" style="margin-left: 100px">
+		<img src="te.png" alt="te" width="500" height="500" style="margin-left: 100px" >
+	</div>
+	<div>
+		<img src="code metrics.png" alt="tr" width="378" height="67" style="margin-left: 100px; margin-top: 50px">
+	</div>
+	<div class="row">
+  	<div class="column1">
+  			<input type="file" id = "myFile" size="40" style="margin-left: 150px; margin-top: 50px">
+  	</div>
+  	<div><a href="javascript:metric(x)">
+  		<img src="upload.png" width="300" height="300" style="margin-left: 150px; margin-top: 30px"></a>
+  		<script type="text/javascript" language="javascript">
+  			var x = document.getElementById("myFile");
+			
+  function metric(x) {
+      var oShell = new ActiveXObject("wscript.shell"); 
+      oShell.Run("cmd.exe  /k python C:\\Users\\Sai\\Desktop\\pybugs\\ast10.py "+x.files.item(0).name);
+	  }
+	  function metric_display()
+	  {window.location.href("C:\\Users\\Sai\\Desktop\\pybugs\\metrics.html");
+	}
+  
+  
+</script>
+		<a href="javascript:metric_display(x)">
+		<img src="arrow.png" width="199" height="278" style="margin-left: 150px; margin-top: 20px">
+		</a>
+  	</div>
+    
+</div>
+
+</body>
+</html>
